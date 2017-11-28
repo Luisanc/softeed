@@ -17,8 +17,12 @@ class loginModel extends coreModel
     }
 
     public function GetuserDataEstudiante($id){
-    	$query="SELECT * FROM estudiante WHERE ID = $id";
+    	$query="SELECT * FROM estudiante WHERE ID =".$id;
         $usuario=$this->ejecutarSql($query);
         return $usuario;
+    }
+
+    public function GetUserDataReclutador($id){
+
     }
 }

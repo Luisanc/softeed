@@ -19,11 +19,11 @@ class registre extends coreController
         /*if (!empty($this->dataUser)){
             $this->loadView('public/signin',array());
         }*/
-        $this->loadView('public/signup',array());
+        $this->loadView('public/signup',array(),$this->dataUser);
     }
 
     public function reclutador(){
-        $this->loadView('public/signup_r',array());
+        $this->loadView('public/signup_r',array(),$this->dataUser);
     }
 
     public function createReclutador(){
@@ -31,6 +31,6 @@ class registre extends coreController
     }
 
     public function estudiante(){
-        $this->loadView('public/signup_e',array());
+        $this->loadView('public/signup_e',array(),$this->dataUser);
     }
 }

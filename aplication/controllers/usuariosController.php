@@ -33,7 +33,7 @@ class usuariosController extends coreController
         $this->loadView("usuariosView",array(
             "allusers"=>$allusers,
             "dataLog"=>$data
-        ));
+        ),$this->dataUser);
     }
 
     public function borrar(){

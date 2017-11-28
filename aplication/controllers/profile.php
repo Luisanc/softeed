@@ -19,6 +19,12 @@ class profile extends coreController
     }
 
     public function index(){
-        $this->loadView('public/profile',array('lang'=>DEFAULT_LANG));
+        if (!empty($this->dataUser)){
+            $this->loadView('public/profile',array(),$this->dataUser);
+        }
+        else{
+            $this->redirect('login','index');
+            //$this->loadView('public/signin',array(),$this->dataUser);
+        }
     }
 }

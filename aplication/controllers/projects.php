@@ -19,6 +19,6 @@ class projects extends coreController
     }
 
     public function index(){
-        $this->loadView('public/showcase',array('lang'=>DEFAULT_LANG));
+        $this->loadView('public/showcase',array(),$this->dataUser);
     }
 }
